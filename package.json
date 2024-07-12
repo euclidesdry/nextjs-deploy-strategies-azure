@@ -1,10 +1,11 @@
 {
-  "name": "my-turborepo",
+  "name": "nextjs-deploy-azure",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "test": "turbo test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -15,7 +16,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "yarn@4.3.1",
   "workspaces": [
     "apps/*",
     "packages/*"
