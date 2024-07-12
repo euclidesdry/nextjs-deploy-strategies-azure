@@ -33,15 +33,16 @@ jobs:
         with:
           cmd: turbo run build --filter=web-static
 
-      - name: Checking app directory
+      - name: 👨‍💻 Checking app directory
         run: |
+          cd ./apps/web-static
           ls -la
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: app
-          path: ./app/web-static/build
+          path: ./apps/web-static/build
 
   deploy-publish:
     runs-on: ubuntu-latest
