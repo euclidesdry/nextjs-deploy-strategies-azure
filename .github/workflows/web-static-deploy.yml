@@ -33,12 +33,12 @@ jobs:
         with:
           cmd: turbo run build --filter=web-static
 
-      - name: 👨‍💻 Checking app directory
+      - name: 📂 Checking app directory
         run: |
           cd ./apps/web-static
           ls -la
 
-      - name: Upload artifact for deployment job
+      - name: 🔼 Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: app
@@ -48,14 +48,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checking app directory
-        run: |
-          ls -la
-
-      - name: Download artifact from build job
+      - name: 📥 Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: app
+
+      - name: 📂 Checking app directory
+        run: |
+          ls -la
 
       - name: 🖥️ 🚀 Deploying the Application
         id: swa
@@ -65,7 +65,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
           action: "upload"
           skip_app_build: true
-          app_location: "/build" # App source code path
+          app_location: "/apps/web-static/build" # App source code path
 
         env: # Add environment variables here
           IS_STATIC_EXPORT: true
