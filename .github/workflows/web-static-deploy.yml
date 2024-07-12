@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app
-          path: ./build
+          path: ./app/web-static/build
 
   deploy-publish:
     runs-on: ubuntu-latest
