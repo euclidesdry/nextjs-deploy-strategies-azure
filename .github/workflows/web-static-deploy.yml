@@ -59,6 +59,11 @@ jobs:
         with:
           cmd: turbo run build --filter=web-static
 
+      - uses: actions/checkout@v3
+      - run: |
+          cd apps/web-static
+          ls -la
+
       - name: 🖥️ 🚀 Deploying the Application
         id: swa
         uses: azure/static-web-apps-deploy@latest
