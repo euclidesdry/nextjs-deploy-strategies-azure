@@ -72,8 +72,9 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
           action: "upload"
           skip_app_build: true
-          app_location: "apps/web-static" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
+          app_location: "apps/web-static/build" # App source code path
+        #   api_location: "" # Api source code path - optional
+        #   output_location: "build" # Built app content directory - optional
+
         env: # Add environment variables here
           IS_STATIC_EXPORT: true
