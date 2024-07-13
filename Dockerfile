@@ -75,4 +75,4 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/web/public/ ./apps/web/pub
 EXPOSE 3000
 ENV PORT 3000
 
-CMD ["dumb-init", "node", "apps/web/server.js"]
+CMD HOSTNAME="0.0.0.0" node apps/web/server.js
