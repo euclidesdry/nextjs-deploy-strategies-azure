@@ -56,3 +56,4 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           # slot-name: "Test"
           publish-profile: ${{ secrets.AZURE_WEBAPP_DOCKER_PUBLISH_PROFILE }}
+          images: "${{ env.REGISTRY }}/${{ github.repository }}:${{ github.sha }}"

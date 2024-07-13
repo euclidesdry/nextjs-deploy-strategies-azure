@@ -72,7 +72,8 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/we
 # copy the public folder from the project as this is not included in the build process
 COPY --from=installer --chown=nextjs:nodejs /app/apps/web/public/ ./apps/web/public
 
-EXPOSE 3000
+ENV HOST 0.0.0.0
 ENV PORT 3000
+EXPOSE 3000
 
-CMD HOSTNAME="0.0.0.0" node apps/web/server.js
+CMD node apps/web/server.js
