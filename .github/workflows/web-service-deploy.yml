@@ -43,6 +43,9 @@ jobs:
           cd ./apps/web-service
           cp -R ./public ./.next/standalone/public
 
+        # run: |
+        #   cp -R ./.next/static ./.next/standalone/.next/static
+
       - name: 🔼 Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
@@ -72,6 +75,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: "Test"
+          # slot-name: "Test"
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
