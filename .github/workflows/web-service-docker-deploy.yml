@@ -25,14 +25,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Login in to GitHub container registry
+      - name: 🔐 Login in to GitHub container registry
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push container image to registry
+      - name: 📦 Build and push container image to registry
         uses: docker/build-push-action@v4
         with:
           # context: .
