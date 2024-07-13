@@ -13,7 +13,7 @@ export default function Home() {
           height={38}
           priority
         />
-        <h1>This is a CLI Web App Deploy Sample</h1>
+        <h1>This is a Web Service (Code) App Deploy Sample</h1>
         <ol>
           <li>
             Get started by editing <code>app/page.tsx</code>

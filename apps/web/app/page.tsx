@@ -14,6 +14,9 @@ export default function Home() {
           height={38}
           priority
         />
+
+        <h1>This is a Docker Container Web App Deployed Sample</h1>
+
         <ol>
           <li>
             Get started by editing <code>app/page.tsx</code>

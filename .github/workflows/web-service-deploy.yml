@@ -42,10 +42,7 @@ jobs:
         run: |
           cd ./apps/web-service
           cp -R ./public ./.next/standalone/public
-          cp -a ./.next/standalone/apps/web-service/. ./.next/standalone/
-          cd ./.next/standalone
-          ls -la
-          cd ../../
+          cp -a ./.next/standalone/apps/web-service/. ./.next/standalone/ # only needed because of the project is using workspaces
           cp -R ./.next/static ./.next/standalone/.next/static
 
       - name: 🔼 Upload artifact for deployment job
