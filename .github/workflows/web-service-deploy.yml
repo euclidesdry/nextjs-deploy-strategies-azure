@@ -42,7 +42,7 @@ jobs:
         run: |
           cd ./apps/web-service
           cp -R ./public ./.next/standalone/public
-          cp -R ./.next/standalone/apps/web-service ./.next/standalone/
+          cp -R ./.next/standalone/apps/web-service/ ./.next/standalone/
           cd ./.next/standalone
           ls -la
           cd ../../
