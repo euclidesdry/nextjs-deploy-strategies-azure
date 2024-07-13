@@ -8762,9 +8762,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-cli@workspace:apps/web-cli":
+"web-service@workspace:apps/web-service":
   version: 0.0.0-use.local
-  resolution: "web-cli@workspace:apps/web-cli"
+  resolution: "web-service@workspace:apps/web-service"
   dependencies:
     "@repo/eslint-config": "npm:*"
     "@repo/typescript-config": "npm:*"
