@@ -41,9 +41,9 @@ jobs:
       - name: 📁 Copying static files
         run: |
           cd ./apps/web-service
-          cp -R ./public ./.next/standalone/
+          cp -R ./public ./.next/standalone/public
           cp -R ./.next/standalone/apps/web-service ./.next/standalone/
-          cp -R ./.next/static ./.next/standalone/.next/
+          cp -R ./.next/static ./.next/standalone/.next/static
 
       - name: 🔼 Upload artifact for deployment job
         uses: actions/upload-artifact@v4
